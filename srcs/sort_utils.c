@@ -6,7 +6,7 @@
 /*   By: lauremasson <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 17:28:28 by lauremass         #+#    #+#             */
-/*   Updated: 2021/12/14 17:41:30 by lauremass        ###   ########.fr       */
+/*   Updated: 2021/12/20 16:04:34 by lauremass        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,8 +91,12 @@ void	find_compare_move(t_stack *stack_a, t_element *b_element,
 	new->move = count_move(stack_a, new->a->index, stack_b, new->b->index);
 	if (info->a == NULL || new->move < info->move)
 	{
+		if (info->a != NULL)
+			free(info->a);
 		info->a = create_element(new->a->nbr);
 		info->a->index = new->a->index;
+		if (info->b)
+			free(info->b);
 		info->b = create_element(new->b->nbr);
 		info->b->index = new->b->index;
 		info->move_a = new->move_a;
