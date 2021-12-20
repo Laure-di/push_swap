@@ -6,7 +6,7 @@
 /*   By: lmasson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 14:44:57 by lmasson           #+#    #+#             */
-/*   Updated: 2021/12/14 17:31:32 by lauremass        ###   ########.fr       */
+/*   Updated: 2021/12/20 15:28:00 by lauremass        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ t_element	*find_a(t_stack *stack_a, int index_b)
 	return (element_a);
 }
 
-enum move	find_move(t_stack *stack, int index)
+enum e_move	find_move(t_stack *stack, int index)
 {
 	int			length;
 	t_element	*front;

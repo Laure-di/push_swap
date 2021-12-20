@@ -6,7 +6,7 @@
 /*   By: lauremasson <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 20:14:49 by lauremass         #+#    #+#             */
-/*   Updated: 2021/12/14 17:30:25 by lauremass        ###   ########.fr       */
+/*   Updated: 2021/12/20 15:27:34 by lauremass        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	sort_b(t_data *data, t_move_info *info)
 
 void	align_a(t_stack *stack_a, int length)
 {
-	enum move	move;
+	enum e_move	move;
 
 	move = find_move(stack_a, 0);
 	while (!(is_sorted(stack_a, length)))

@@ -20,8 +20,6 @@ SRCS =	push_swap.c \
 
 OBJDIR = objs
 
-MEM = -fsanitize=address
-
 OBJS	=	${addprefix ${OBJDIR}/, ${SRCS:.c=.o}}
 
 HEAD	=	-I include
@@ -35,7 +33,7 @@ ${OBJDIR}/%.o:${SRCS_DIR}/%.c
 			${CC} ${CFLAGS} ${MEM} ${HEAD} -c $< -o $@
 
 $(NAME):	${OBJS}
-					${CC} ${CFLAGS} ${MEM} ${HEAD} ${OBJS} -o $@
+					${CC} ${CFLAGS} ${HEAD} ${OBJS} -o $@
 
 all: ${NAME}
 
